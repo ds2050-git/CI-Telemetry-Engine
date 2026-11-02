@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CI Telemetry & Task Orchestration Engine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>CI Task Orchestration & AI Telemetry Engine</h2>
+        <form id="jobForm">
+            <input type="text" id="jobName" placeholder="Build Pipeline Name" required>
+            <select id="status">
+                <option value="SUCCESS">Status: Success</option>
+                <option value="FAILED">Status: Failed</option>
+                <option value="RUNNING">Status: Running</option>
+            </select>
+            <textarea id="logOutput" placeholder="Paste CI Build Log Output Here..." required></textarea>
+            <button type="submit">Ingest & Analyze Telemetry</button>
+        </form>
+        <h3>Active Telemetry Stream</h3>
+        <table id="jobTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Job Name</th>
+                    <th>Status</th>
+                    <th>Risk Level</th>
+                    <th>AI Failure Analysis</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
